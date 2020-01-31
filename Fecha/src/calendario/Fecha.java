@@ -4,18 +4,18 @@ package calendario;
 public class Fecha {
     private int dia;
     private int mes;
-    private int ano;
+    private int anio;
     
     public Fecha(){
         dia = 01;
         mes = 01;
-        ano = 1900;
+        anio = 1900;
     }
     
-    public Fecha(int dia, int mes, int ano){
+    public Fecha(int dia, int mes, int anio){
         this.dia = dia;
         this.mes = mes;
-        this.ano = ano;
+        this.anio = anio;
     }
     
     public int getDia(){
@@ -26,8 +26,8 @@ public class Fecha {
         return mes;
     }
     
-    public int getAno(){
-        return ano;
+    public int getAnio(){
+        return anio;
     }
     
     public void setDia(int dia){
@@ -38,16 +38,20 @@ public class Fecha {
         this.mes = mes;
     }
     
-    public void setAno(int ano){
-        this.ano = ano;
+    public void setAnio(int ano){
+        this.anio = anio;
     }
     
     public void bisiesto(){
-    
+        if((anio%4)==0){
+            System.out.println("El año:" + anio + "es bisiesto"); 
+	}else{
+            System.out.println("El año:" + anio + "no es bisiesto"); 
+	}
     }
     
     public int diaMes(){
-    
+        return 0;
     }
     
     private void valida(){
@@ -55,15 +59,15 @@ public class Fecha {
     }
     
     public void corta(){
-    
+        System.out.println(dia + "-" + mes + "-"+anio); 
     }
     
     public int diasTranscurridos(){
-    
+        return 0;
     }
     
     public int diaSemana(){
-    
+        return 0;
     }
     
     public void larga(){
@@ -83,6 +87,6 @@ public class Fecha {
     }
     
     public String toString(){
-    
+     return "";
     }
 }
